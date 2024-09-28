@@ -12,7 +12,9 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
-
+      - name: Install Hugo
+        run: sudo apt-get install -y hugo
+        
       - name: Set up Buildx
         uses: docker/setup-buildx-action@v3.0.0
 
