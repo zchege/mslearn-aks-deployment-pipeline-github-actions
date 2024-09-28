@@ -3,6 +3,5 @@ RUN curl -sL https://deb.nodesource.com/setup_20.x | bash - && apt-get update -y
 RUN git clone https://github.com/MicrosoftDocs/mslearn-aks-deployment-pipeline-github-actions /contoso-website
 WORKDIR /contoso-website/src
 RUN git submodule update --init themes/introduction
-RUN ls -la public
 RUN hugo && mv /usr/bin/* /usr/share/nginx/html
 EXPOSE 80
